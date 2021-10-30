@@ -19,7 +19,7 @@
         var map = new MapVis();
 
 
-        //load the data corresponding to all the election years
+        //load the data corresponding to all the disasters
         //pass this data and instances of all the charts that update on year selection to yearChart's constructor
         //JSON file
         // d3.csv("data/yearwise-winner.csv")
@@ -30,6 +30,15 @@
         //     });
 
         //when extracting the data, call it 'disasters'
+        let disasters = [];
+
+        $.getJSON('https://www.fema.gov/api/open/v2/DisasterDeclarationsSummaries', function (json) {
+            if (json.hasOwnProperty("DisasterDeclarationsSummaries")) {
+                disasters = json["DisasterDeclarationsSummaries"];      
+            }
+        console.log(disasters);
+        });
+
 
         
     }
