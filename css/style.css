@@ -1,0 +1,27 @@
+#mapVis{
+    background-color: rgb(179, 255, 229);
+    height: 800px;
+    width: 100%;
+    /* float: right; */
+}
+
+#popupBar{
+    background-color: salmon;
+    height: 800px;
+    width: 100%;
+    z-index: 1;
+    /* float: left; */
+}
+
+#yearChart{
+    background-color: lightskyblue;
+    height: 100px;
+    width: 100%;
+}
+
+.grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 65%;
+    grid-gap: 50px 20px;
+}
